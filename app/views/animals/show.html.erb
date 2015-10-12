@@ -2,3 +2,20 @@
 
 <%= link_to "Edit", edit_animal_path(@animal) %>
 <%= link_to "Delete", animal_path(@animal), :data => {:method => "delete"} %>
+
+
+<% if @animal.sightings %>
+  <h4>Here are the sightings for this listyet to be done</h4>
+  <ul>
+    <% @animal.sightings.each do |t|%>
+    <li>
+      <%= t.date %> |
+      <%= t.longitude %> |
+      <%= t.latitude %> 
+    </li>
+    <% end %>
+  </ul>
+
+  <% else %>
+  <p>There are no sightings yet!</p>
+<% end %>
