@@ -5,13 +5,13 @@
 
 
 <% if @animal.sightings %>
-  <h4>Here are the sightings for this listyet to be done</h4>
+  <h4>Here are the sightings for this animal</h4>
   <ul>
     <% @animal.sightings.each do |t|%>
     <li>
       <%= t.date %> |
       <%= t.longitude %> |
-      <%= t.latitude %> 
+      <%= t.latitude %>
     </li>
     <% end %>
   </ul>
