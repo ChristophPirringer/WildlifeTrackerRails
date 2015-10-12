@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :species
+  root 'animals#index'
+  resources :animals
 end
